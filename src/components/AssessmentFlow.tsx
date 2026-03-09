@@ -132,6 +132,39 @@ export default function AssessmentFlow() {
               ))}
             </div>
 
+            {/* Info link if available */}
+            {currentNode.infoLink && (
+              <div className="mt-8">
+                <div className="relative group/info">
+                  <div className="absolute -inset-1 bg-gradient-to-r from-red-500/20 to-rose-500/20 rounded-2xl blur-lg opacity-0 group-hover/info:opacity-100 transition-opacity duration-300" />
+                  <a
+                    href={currentNode.infoLink.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="relative flex items-center gap-4 p-4 rounded-xl
+                               bg-gradient-to-r from-red-500/10 to-rose-500/10
+                               border border-red-500/20 hover:border-red-500/40
+                               transition-all duration-300 group-hover/info:scale-[1.01]"
+                  >
+                    <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-red-500 to-rose-500 flex items-center justify-center shadow-lg shadow-red-500/20">
+                      <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                      </svg>
+                    </div>
+                    <div className="flex-1">
+                      <p className="text-white font-semibold">{currentNode.infoLink.label}</p>
+                      {currentNode.infoLink.description && (
+                        <p className="text-red-300/80 text-sm mt-0.5">{currentNode.infoLink.description}</p>
+                      )}
+                    </div>
+                    <svg className="w-5 h-5 text-slate-400 group-hover/info:text-red-400 group-hover/info:translate-x-1 transition-all" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            )}
+
             {/* Guidelines link if available */}
             {currentNode.guidelineLink && (
               <div className="mt-8">
