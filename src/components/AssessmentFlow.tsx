@@ -63,24 +63,6 @@ export default function AssessmentFlow() {
 
   return (
     <div className={`w-full max-w-xl mx-auto transition-all duration-300 ${isTransitioning ? 'opacity-0 translate-y-2' : 'opacity-100 translate-y-0'}`}>
-      {/* Progress bar */}
-      <div className="mb-6">
-        <div className="flex items-center justify-between mb-2">
-          <span className="text-xs text-slate-500 font-medium uppercase tracking-wider">
-            Step {history.length}
-          </span>
-          <span className="text-xs text-slate-600">
-            {history.length} of ~{history.length + 2}
-          </span>
-        </div>
-        <div className="h-1 bg-white/5 rounded-full overflow-hidden">
-          <div
-            className="h-full bg-gradient-to-r from-blue-500 to-blue-400 rounded-full transition-all duration-500 ease-out"
-            style={{ width: `${Math.min((history.length / (history.length + 2)) * 100, 90)}%` }}
-          />
-        </div>
-      </div>
-
       {/* Question card */}
       <div className="bg-white/[0.04] rounded-xl border border-white/[0.08] overflow-hidden">
         {/* Question */}
