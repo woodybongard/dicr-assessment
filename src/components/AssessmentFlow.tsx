@@ -277,7 +277,7 @@ function EndpointView({
                 </div>
               </div>
               <div className="flex items-center justify-center gap-6 mb-6">
-                <Image src="/genesis-logo.svg" alt="Genesis" width={400} height={120} className="h-20 w-auto" />
+                <Image src="/genesis-logo.png" alt="Genesis" width={400} height={120} className="h-20 w-auto" />
                 <Image src="/NobelBiocare logo_0_4.png" alt="Nobel Biocare" width={350} height={100} className="h-14 w-auto opacity-70" />
               </div>
 
@@ -298,7 +298,7 @@ function EndpointView({
               <p className={`text-xs ${t.textMuted} uppercase tracking-wider font-medium mb-4`}>Course Providers</p>
               <div className="grid grid-cols-2 gap-4 mx-auto mb-6">
                 <div className={`${t.optionBg} border ${t.optionBorder} rounded-xl p-4 flex items-center justify-center aspect-[3/2]`}>
-                  <img src="/genesis-logo.svg" alt="Genesis" className="max-h-full max-w-full object-contain" />
+                  <img src="/genesis-logo.png" alt="Genesis" className="max-h-full max-w-full object-contain" />
                 </div>
                 <div className={`${t.optionBg} border ${t.optionBorder} rounded-xl p-4 flex items-center justify-center aspect-[3/2]`}>
                   <img src="/tide-logo.png" alt="TIDE" className="max-h-full max-w-full object-contain" />
