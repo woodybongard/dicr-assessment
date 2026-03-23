@@ -481,7 +481,7 @@ export const flowData: Record<string, FlowNode> = {
   'endpoint-peer-review': {
     id: 'endpoint-peer-review',
     type: 'endpoint',
-    title: 'Validate Your Experience',
+    title: 'Peer Reviewed to Validate Your Education and Experience',
     description: 'Based on your responses, we recommend the DICR Peer Review program to help validate your education and experience.',
     action: {
       label: 'Learn About DICR Program',
