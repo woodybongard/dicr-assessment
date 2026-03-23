@@ -304,7 +304,7 @@ function EndpointView({
                   <img src="/tide-logo.png" alt="TIDE" className="max-h-full max-w-full object-contain" />
                 </div>
                 <div className={`${t.optionBg} border ${t.optionBorder} rounded-xl p-4 flex items-center justify-center aspect-[3/2]`}>
-                  <img src="/gdm-logo.avif" alt="GDM" className="max-h-full max-w-full object-contain" />
+                  <img src="/gdm-logo.png" alt="GDM" className="max-h-full max-w-full object-contain" />
                 </div>
                 <div className={`${t.optionBg} border ${t.optionBorder} rounded-xl p-4 flex items-center justify-center aspect-[3/2]`}>
                   <img src="/ddi-logo.png" alt="DDI - Digital Dentistry Institute" className="max-h-full max-w-full object-contain" />
