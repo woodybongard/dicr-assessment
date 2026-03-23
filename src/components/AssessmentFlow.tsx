@@ -297,21 +297,21 @@ function EndpointView({
             <div className="mb-8">
               <p className={`text-xs ${t.textMuted} uppercase tracking-wider font-medium mb-4`}>Course Providers</p>
               <div className="grid grid-cols-2 gap-4 mx-auto mb-6">
-                <div className={`${t.optionBg} border ${t.optionBorder} rounded-lg p-2 flex items-center justify-center aspect-[2/1]`}>
+                <div className={`${t.optionBg} border ${t.optionBorder} rounded-xl p-3 flex items-center justify-center aspect-[4/3]`}>
                   <img src="/genesis-logo.png" alt="Genesis" className="max-h-full max-w-full object-contain" />
                 </div>
-                <div className={`${t.optionBg} border ${t.optionBorder} rounded-lg p-2 flex items-center justify-center aspect-[2/1]`}>
+                <div className={`${t.optionBg} border ${t.optionBorder} rounded-xl p-3 flex items-center justify-center aspect-[4/3]`}>
                   <img src="/tide-logo.png" alt="TIDE" className="max-h-full max-w-full object-contain" />
                 </div>
-                <div className={`${t.optionBg} border ${t.optionBorder} rounded-lg p-2 flex items-center justify-center aspect-[2/1]`}>
+                <div className={`${t.optionBg} border ${t.optionBorder} rounded-xl p-3 flex items-center justify-center aspect-[4/3]`}>
                   <img src="/gdm-logo.png" alt="GDM" className="max-h-full max-w-full object-contain" />
                 </div>
-                <div className={`${t.optionBg} border ${t.optionBorder} rounded-lg p-2 flex items-center justify-center aspect-[2/1]`}>
+                <div className={`${t.optionBg} border ${t.optionBorder} rounded-xl p-3 flex items-center justify-center aspect-[4/3]`}>
                   <img src="/ddi-logo.png" alt="DDI - Digital Dentistry Institute" className="max-h-full max-w-full object-contain" />
                 </div>
               </div>
               <div className={`border-t ${t.cardBorder} pt-5 flex items-center justify-center`}>
-                <img src="/NobelBiocare logo_0_4.png" alt="Nobel Biocare" className="h-8 w-auto opacity-70" />
+                <img src="/NobelBiocare logo_0_4.png" alt="Nobel Biocare" className="h-14 w-auto opacity-70" />
               </div>
             </div>
           )}
