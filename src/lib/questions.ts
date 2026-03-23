@@ -484,7 +484,7 @@ export const flowData: Record<string, FlowNode> = {
     title: 'Peer Reviewed to Validate Your Education and Experience',
     description: 'Based on your responses, we recommend the DICR Peer Review program to help validate your education and experience.',
     action: {
-      label: 'Learn About DICR Program',
+      label: 'Learn About the Validation Program',
       url: '#peer-review',
       type: 'peer-review',
     },
