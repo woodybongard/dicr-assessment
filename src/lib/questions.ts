@@ -172,7 +172,7 @@ export const flowData: Record<string, FlowNode> = {
       { label: 'No', nextId: 'endpoint-courses' },
     ],
     infoLink: {
-      label: 'Note',
+      label: 'Documentation and training requirements',
       url: '#',
       description: 'Dentists who perform implant dentistry must keep records of their training in implant dentistry, including courses they have attended, mentorship, clinical supervision and required continuing education.',
     },
@@ -363,7 +363,7 @@ export const flowData: Record<string, FlowNode> = {
       { label: 'No', nextId: 'endpoint-courses' },
     ],
     infoLink: {
-      label: 'Note',
+      label: 'Documentation and training requirements',
       url: '#',
       description: 'Dentists who perform implant dentistry must keep records of their training in implant dentistry, including courses they have attended, mentorship, clinical supervision and required continuing education.',
     },
