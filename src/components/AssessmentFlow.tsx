@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import Image from 'next/image';
 import { flowData, START_NODE_ID, FlowNode, EndpointNode, WarningNode } from '@/lib/questions';
 import { useTheme } from '@/components/ThemeContext';
 
@@ -258,6 +259,30 @@ function EndpointView({
             {node.description}
           </p>
 
+          {/* Course provider logos — CE courses endpoint only */}
+          {isCoursesEndpoint && (
+            <div className="mb-8">
+              <p className={`text-xs ${t.textMuted} uppercase tracking-wider font-medium mb-4`}>Course Providers</p>
+              <div className="grid grid-cols-2 gap-4 max-w-sm mx-auto mb-6">
+                <div className={`${t.optionBg} border ${t.optionBorder} rounded-xl p-4 flex items-center justify-center h-20`}>
+                  <Image src="/genesis-logo.svg" alt="Genesis" width={140} height={40} className="h-8 w-auto" />
+                </div>
+                <div className={`${t.optionBg} border ${t.optionBorder} rounded-xl p-4 flex items-center justify-center h-20`}>
+                  <Image src="/tide-logo.png" alt="TIDE" width={140} height={40} className="h-10 w-auto" />
+                </div>
+                <div className={`${t.optionBg} border ${t.optionBorder} rounded-xl p-4 flex items-center justify-center h-20`}>
+                  <Image src="/gdm-logo.avif" alt="GDM" width={140} height={40} className="h-8 w-auto" />
+                </div>
+                <div className={`${t.optionBg} border ${t.optionBorder} rounded-xl p-4 flex items-center justify-center h-20`}>
+                  <Image src="/ddi-logo.png" alt="DDI - Digital Dentistry Institute" width={200} height={60} className="h-8 w-auto" />
+                </div>
+              </div>
+              <div className={`border-t ${t.cardBorder} pt-4`}>
+                <Image src="/NobelBiocare logo_0_4.png" alt="Nobel Biocare" width={160} height={50} className="h-6 w-auto mx-auto opacity-70" />
+              </div>
+            </div>
+          )}
+
           <a
             href={node.action.url}
             className={`inline-flex items-center gap-2.5 px-7 py-3.5 rounded-xl text-white font-medium
@@ -268,6 +293,13 @@ function EndpointView({
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
             </svg>
           </a>
+
+          {/* Browse all courses — non-clickable */}
+          {isCoursesEndpoint && (
+            <p className={`mt-4 text-sm ${t.textMuted} font-medium`}>
+              Browse All Courses
+            </p>
+          )}
         </div>
       </div>
 
