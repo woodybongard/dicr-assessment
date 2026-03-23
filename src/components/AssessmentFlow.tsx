@@ -77,7 +77,7 @@ export default function AssessmentFlow() {
   }
 
   return (
-    <div className={`w-full max-w-lg mx-auto transition-all duration-300 ${isTransitioning ? 'opacity-0 translate-y-2' : 'opacity-100 translate-y-0'}`}>
+    <div className={`w-full max-w-xl mx-auto transition-all duration-300 ${isTransitioning ? 'opacity-0 translate-y-2' : 'opacity-100 translate-y-0'}`}>
       {/* Card */}
       <div className={`${t.cardBg} rounded-2xl border ${t.cardBorder} shadow-2xl shadow-black/20 overflow-hidden transition-colors duration-300`}>
         {/* Question */}
@@ -223,7 +223,7 @@ function EndpointView({
       : 'bg-emerald-600 hover:bg-emerald-500 shadow-emerald-900/30';
 
   return (
-    <div className={`w-full max-w-lg mx-auto transition-all duration-300 ${isTransitioning ? 'opacity-0 translate-y-2' : 'opacity-100 translate-y-0'}`}>
+    <div className={`w-full max-w-xl mx-auto transition-all duration-300 ${isTransitioning ? 'opacity-0 translate-y-2' : 'opacity-100 translate-y-0'}`}>
       {/* Result card */}
       <div className={`${t.cardBg} rounded-2xl border ${t.cardBorder} shadow-2xl shadow-black/20 overflow-hidden transition-colors duration-300`}>
         {/* Header */}
@@ -296,22 +296,22 @@ function EndpointView({
           {isCoursesEndpoint && (
             <div className="mb-8">
               <p className={`text-xs ${t.textMuted} uppercase tracking-wider font-medium mb-4`}>Course Providers</p>
-              <div className="grid grid-cols-2 gap-4 mx-auto mb-6">
-                <div className={`${t.optionBg} border ${t.optionBorder} rounded-xl p-3 flex items-center justify-center aspect-[4/3]`}>
-                  <img src="/genesis-logo.png" alt="Genesis" className="max-h-full max-w-full object-contain" />
+              <div className="grid grid-cols-2 gap-4 max-w-sm mx-auto mb-6">
+                <div className={`${t.optionBg} border ${t.optionBorder} rounded-xl p-4 flex items-center justify-center h-20`}>
+                  <Image src="/genesis-logo.png" alt="Genesis" width={140} height={40} className="h-8 w-auto" />
                 </div>
-                <div className={`${t.optionBg} border ${t.optionBorder} rounded-xl p-3 flex items-center justify-center aspect-[4/3]`}>
-                  <img src="/tide-logo.png" alt="TIDE" className="max-h-full max-w-full object-contain" />
+                <div className={`${t.optionBg} border ${t.optionBorder} rounded-xl p-4 flex items-center justify-center h-20`}>
+                  <Image src="/tide-logo.png" alt="TIDE" width={140} height={40} className="h-10 w-auto" />
                 </div>
-                <div className={`${t.optionBg} border ${t.optionBorder} rounded-xl p-3 flex items-center justify-center aspect-[4/3]`}>
-                  <img src="/gdm-logo.png" alt="GDM" className="max-h-full max-w-full object-contain" />
+                <div className={`${t.optionBg} border ${t.optionBorder} rounded-xl p-4 flex items-center justify-center h-20`}>
+                  <Image src="/gdm-logo.png" alt="GDM" width={140} height={40} className="h-8 w-auto" />
                 </div>
-                <div className={`${t.optionBg} border ${t.optionBorder} rounded-xl p-3 flex items-center justify-center aspect-[4/3]`}>
-                  <img src="/ddi-logo.png" alt="DDI - Digital Dentistry Institute" className="max-h-full max-w-full object-contain" />
+                <div className={`${t.optionBg} border ${t.optionBorder} rounded-xl p-4 flex items-center justify-center h-20`}>
+                  <Image src="/ddi-logo.png" alt="DDI - Digital Dentistry Institute" width={200} height={60} className="h-8 w-auto" />
                 </div>
               </div>
-              <div className={`border-t ${t.cardBorder} pt-5 flex items-center justify-center`}>
-                <img src="/NobelBiocare logo_0_4.png" alt="Nobel Biocare" className="h-14 w-auto opacity-70" />
+              <div className={`border-t ${t.cardBorder} pt-4`}>
+                <Image src="/NobelBiocare logo_0_4.png" alt="Nobel Biocare" width={160} height={50} className="h-6 w-auto mx-auto opacity-70" />
               </div>
             </div>
           )}
@@ -369,7 +369,7 @@ function WarningView({
   const { t } = useTheme();
 
   return (
-    <div className={`w-full max-w-lg mx-auto transition-all duration-300 ${isTransitioning ? 'opacity-0 translate-y-2' : 'opacity-100 translate-y-0'}`}>
+    <div className={`w-full max-w-xl mx-auto transition-all duration-300 ${isTransitioning ? 'opacity-0 translate-y-2' : 'opacity-100 translate-y-0'}`}>
       <div className={`${t.cardBg} rounded-2xl border ${t.warningBorder} shadow-2xl shadow-black/20 overflow-hidden transition-colors duration-300`}>
         {/* Warning header */}
         <div className={`${t.warningHeaderBg} px-7 py-5 border-b ${t.warningBorder} flex items-center gap-3`}>
