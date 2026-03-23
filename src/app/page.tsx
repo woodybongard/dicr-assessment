@@ -1,21 +1,30 @@
+'use client';
+
 import AssessmentFlow from '@/components/AssessmentFlow';
+import { ThemeProvider, ThemeToggle, useTheme } from '@/components/ThemeContext';
 import Image from 'next/image';
 
-export default function Home() {
+function HomeContent() {
+  const { t } = useTheme();
+
   return (
-    <div className="min-h-screen bg-[#0B1120] text-white">
-      {/* Subtle background gradient */}
+    <div className={`min-h-screen ${t.pageBg} ${t.text} transition-colors duration-300`}>
+      {/* Background */}
       <div className="fixed inset-0 z-0">
-        <div className="absolute inset-0 bg-gradient-to-b from-[#0B1120] via-[#0F1A2E] to-[#0B1120]" />
-        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-blue-600/[0.07] rounded-full blur-[120px]" />
+        <div className={`absolute inset-0 bg-gradient-to-b ${t.pageGradientFrom} ${t.pageGradientVia} ${t.pageGradientFrom}`} />
+        <div className={`absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] ${t.pageGlow} rounded-full blur-[120px]`} />
       </div>
 
       {/* Content */}
       <div className="relative z-10">
+        {/* Theme toggle */}
+        <div className="pt-4 px-4">
+          <ThemeToggle />
+        </div>
+
         {/* Header */}
-        <header className="pt-12 pb-10 px-4">
+        <header className="pt-6 pb-10 px-4">
           <div className="max-w-3xl mx-auto text-center">
-            {/* Logo */}
             <div className="mb-6">
               <Image
                 src="/dicr-logo-v5.png"
@@ -27,13 +36,13 @@ export default function Home() {
               />
             </div>
 
-            <div className="w-16 h-px bg-slate-700 mx-auto mb-6" />
+            <div className={`w-16 h-px ${t.divider} mx-auto mb-6`} />
 
-            <h1 className="text-2xl md:text-3xl font-semibold text-white mb-2 tracking-tight">
+            <h1 className={`text-2xl md:text-3xl font-semibold ${t.text} mb-2 tracking-tight`}>
               Self-Assessment Tool
             </h1>
 
-            <p className="text-slate-400 text-base max-w-md mx-auto">
+            <p className={`${t.textSecondary} text-base max-w-md mx-auto`}>
               Determine your pathway for implant dentistry continuing education and registration.
             </p>
           </div>
@@ -45,14 +54,22 @@ export default function Home() {
         </main>
 
         {/* Footer */}
-        <footer className="py-8 border-t border-white/5">
+        <footer className={`py-8 border-t ${t.footerBorder}`}>
           <div className="max-w-3xl mx-auto px-4 text-center">
-            <p className="text-slate-600 text-xs tracking-wide">
+            <p className={`${t.footerText} text-xs tracking-wide`}>
               &copy; {new Date().getFullYear()} DICR &middot; Dental Implant Community Resource
             </p>
           </div>
         </footer>
       </div>
     </div>
+  );
+}
+
+export default function Home() {
+  return (
+    <ThemeProvider>
+      <HomeContent />
+    </ThemeProvider>
   );
 }
