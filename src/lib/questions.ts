@@ -122,8 +122,8 @@ export const flowData: Record<string, FlowNode> = {
       description: 'Complex cases involve advanced surgical procedures such as bone grafting, sinus lifts, immediate placement, or cases with significant anatomical risks. Simple/straightforward cases involve standard implant placement in adequate bone with minimal risk factors. Before beginning training for complex cases, dentists must have competence and experience in straightforward placement.',
     },
     guidelineLink: {
-      label: 'View RCDSO Implant Guidelines',
-      url: 'https://www.rcdso.org/standards-guidelines-resources/standards-guidelines-advisories/faqsearchresults?query=implants&faqIDs=16513',
+      label: 'View RCDSO Case Complexity Definitions (Appendix 1)',
+      url: 'https://cdn.agilitycms.com/rcdso/pdf/guidelines/RCDSO_Guidelines_Implant_Dentistry.pdf#page=12',
     },
   },
 
@@ -255,8 +255,8 @@ export const flowData: Record<string, FlowNode> = {
       { label: 'No, I have my surgical training hours', nextId: 'gd-surgical-keep-docs' },
     ],
     guidelineLink: {
-      label: 'View RCDSO Implant Guidelines',
-      url: 'https://www.rcdso.org/standards-guidelines-resources/standards-guidelines-advisories/faqsearchresults?query=implants&faqIDs=16513',
+      label: 'View RCDSO Case Complexity Definitions (Appendix 1)',
+      url: 'https://cdn.agilitycms.com/rcdso/pdf/guidelines/RCDSO_Guidelines_Implant_Dentistry.pdf#page=12',
     },
   },
 
@@ -339,8 +339,8 @@ export const flowData: Record<string, FlowNode> = {
       description: 'Complex cases involve advanced prosthetic procedures such as full-arch restorations, cases requiring extensive occlusal rehabilitation, or those with significant aesthetic demands. Simple/straightforward cases involve standard implant-supported restorations with minimal complexity. Before beginning training for complex restorations, dentists must have competence and experience in straightforward restoration of dental implants.',
     },
     guidelineLink: {
-      label: 'View RCDSO Implant Guidelines',
-      url: 'https://www.rcdso.org/standards-guidelines-resources/standards-guidelines-advisories/faqsearchresults?query=implants&faqIDs=16513',
+      label: 'View RCDSO Case Complexity Definitions (Appendix 1)',
+      url: 'https://cdn.agilitycms.com/rcdso/pdf/guidelines/RCDSO_Guidelines_Implant_Dentistry.pdf#page=12',
     },
   },
 
@@ -447,8 +447,8 @@ export const flowData: Record<string, FlowNode> = {
       { label: 'No, I have my prosthetic training hours', nextId: 'restore-gd-prosth-keep-docs' },
     ],
     guidelineLink: {
-      label: 'View RCDSO Implant Guidelines',
-      url: 'https://www.rcdso.org/standards-guidelines-resources/standards-guidelines-advisories/faqsearchresults?query=implants&faqIDs=16513',
+      label: 'View RCDSO Case Complexity Definitions (Appendix 1)',
+      url: 'https://cdn.agilitycms.com/rcdso/pdf/guidelines/RCDSO_Guidelines_Implant_Dentistry.pdf#page=12',
     },
   },
 
@@ -481,10 +481,10 @@ export const flowData: Record<string, FlowNode> = {
   'endpoint-peer-review': {
     id: 'endpoint-peer-review',
     type: 'endpoint',
-    title: 'Peer Reviewed to Validate Your Education and Experience',
-    description: 'Based on your responses, we recommend the DICR Peer Review program to help validate your education and experience.',
+    title: 'Verify Your Experience',
+    description: 'Based on your responses, we recommend the DICR Peer Review Verification Program to help you verify your experience at providing dental implant care at different levels of complexity (Straightforward/Complex).',
     action: {
-      label: 'Learn About the Validation Program',
+      label: 'Learn About the Verification Program',
       url: '#peer-review',
       type: 'peer-review',
     },

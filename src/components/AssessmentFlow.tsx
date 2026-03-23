@@ -246,7 +246,7 @@ function EndpointView({
           </div>
 
           <p className={`text-xs ${t.textSecondary} uppercase tracking-wider font-medium mb-2`}>
-            {isPeerReview ? 'DICR Program' : 'Assessment Complete'}
+            {isPeerReview ? 'DICR Peer Review Verification Program' : 'Assessment Complete'}
           </p>
           <h2 className={`text-2xl md:text-3xl font-semibold ${t.text}`}>
             {node.title}
@@ -276,9 +276,18 @@ function EndpointView({
                   <p className={`text-sm font-medium ${t.text}`}>Dr. Brian Freund</p>
                 </div>
               </div>
-              <div className="flex items-center justify-center gap-6">
+              <div className="flex items-center justify-center gap-6 mb-6">
                 <Image src="/genesis-logo.svg" alt="Genesis" width={120} height={35} className="h-7 w-auto" />
                 <Image src="/NobelBiocare logo_0_4.png" alt="Nobel Biocare" width={120} height={35} className="h-5 w-auto opacity-70" />
+              </div>
+
+              {/* What is the program */}
+              <div className={`${t.infoPanelBg} border ${t.infoPanelBorder} rounded-xl p-5 text-left`}>
+                <p className={`text-sm font-semibold ${t.text} mb-2`}>What is the DICR Peer Review Verification Program?</p>
+                <p className={`${t.infoPanelText} text-sm leading-relaxed mb-3`}>
+                  One hour one-on-one sessions with a Genesis Team Oral Maxillofacial Surgeon and Prosthodontist, reviewing dentists&apos; case histories — Medical history, Dental history, Diagnostics, Implant prosthodontic planning, Implant surgical planning, Implant placement, Implant provisionalization, Definitive Implant Restoration, Maintenance, and Complications.
+                </p>
+                <p className={`text-sm font-semibold ${t.text}`}>It is NOT a Report Card.</p>
               </div>
             </div>
           )}
