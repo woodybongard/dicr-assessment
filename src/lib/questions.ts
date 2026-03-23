@@ -171,6 +171,11 @@ export const flowData: Record<string, FlowNode> = {
       { label: 'Yes', nextId: 'placing-gd-complex-experience' },
       { label: 'No', nextId: 'endpoint-courses' },
     ],
+    infoLink: {
+      label: 'Note',
+      url: '#',
+      description: 'Dentists who perform implant dentistry must keep records of their training in implant dentistry, including courses they have attended, mentorship, clinical supervision and required continuing education.',
+    },
   },
 
   'placing-gd-complex-experience': {
@@ -357,6 +362,11 @@ export const flowData: Record<string, FlowNode> = {
       { label: 'Yes', nextId: 'restore-gd-complex-experience' },
       { label: 'No', nextId: 'endpoint-courses' },
     ],
+    infoLink: {
+      label: 'Note',
+      url: '#',
+      description: 'Dentists who perform implant dentistry must keep records of their training in implant dentistry, including courses they have attended, mentorship, clinical supervision and required continuing education.',
+    },
   },
 
   'restore-gd-complex-experience': {
