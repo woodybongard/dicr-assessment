@@ -296,22 +296,22 @@ function EndpointView({
           {isCoursesEndpoint && (
             <div className="mb-8">
               <p className={`text-xs ${t.textMuted} uppercase tracking-wider font-medium mb-4`}>Course Providers</p>
-              <div className="grid grid-cols-2 gap-5 mx-auto mb-6">
-                <div className={`${t.optionBg} border ${t.optionBorder} rounded-xl px-6 py-8 flex items-center justify-center`}>
-                  <Image src="/genesis-logo.svg" alt="Genesis" width={500} height={200} className="w-full max-w-[220px]" />
+              <div className="grid grid-cols-2 gap-4 mx-auto mb-6">
+                <div className={`${t.optionBg} border ${t.optionBorder} rounded-xl p-4 flex items-center justify-center aspect-[3/2]`}>
+                  <img src="/genesis-logo.svg" alt="Genesis" className="max-h-full max-w-full object-contain" />
                 </div>
-                <div className={`${t.optionBg} border ${t.optionBorder} rounded-xl px-6 py-8 flex items-center justify-center`}>
-                  <Image src="/tide-logo.png" alt="TIDE" width={500} height={200} className="w-full max-w-[220px]" />
+                <div className={`${t.optionBg} border ${t.optionBorder} rounded-xl p-4 flex items-center justify-center aspect-[3/2]`}>
+                  <img src="/tide-logo.png" alt="TIDE" className="max-h-full max-w-full object-contain" />
                 </div>
-                <div className={`${t.optionBg} border ${t.optionBorder} rounded-xl px-6 py-8 flex items-center justify-center`}>
-                  <Image src="/gdm-logo.avif" alt="GDM" width={500} height={200} className="w-full max-w-[220px]" />
+                <div className={`${t.optionBg} border ${t.optionBorder} rounded-xl p-4 flex items-center justify-center aspect-[3/2]`}>
+                  <img src="/gdm-logo.avif" alt="GDM" className="max-h-full max-w-full object-contain" />
                 </div>
-                <div className={`${t.optionBg} border ${t.optionBorder} rounded-xl px-6 py-8 flex items-center justify-center`}>
-                  <Image src="/ddi-logo.png" alt="DDI - Digital Dentistry Institute" width={500} height={200} className="w-full max-w-[220px]" />
+                <div className={`${t.optionBg} border ${t.optionBorder} rounded-xl p-4 flex items-center justify-center aspect-[3/2]`}>
+                  <img src="/ddi-logo.png" alt="DDI - Digital Dentistry Institute" className="max-h-full max-w-full object-contain" />
                 </div>
               </div>
-              <div className={`border-t ${t.cardBorder} py-6 flex items-center justify-center`}>
-                <Image src="/NobelBiocare logo_0_4.png" alt="Nobel Biocare" width={400} height={120} className="w-full max-w-[200px] opacity-70" />
+              <div className={`border-t ${t.cardBorder} pt-5 flex items-center justify-center`}>
+                <img src="/NobelBiocare logo_0_4.png" alt="Nobel Biocare" className="h-10 w-auto opacity-70" />
               </div>
             </div>
           )}
