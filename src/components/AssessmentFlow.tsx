@@ -77,7 +77,7 @@ export default function AssessmentFlow() {
   }
 
   return (
-    <div className={`w-full max-w-2xl mx-auto transition-all duration-300 ${isTransitioning ? 'opacity-0 translate-y-2' : 'opacity-100 translate-y-0'}`}>
+    <div className={`w-full max-w-lg mx-auto transition-all duration-300 ${isTransitioning ? 'opacity-0 translate-y-2' : 'opacity-100 translate-y-0'}`}>
       {/* Card */}
       <div className={`${t.cardBg} rounded-2xl border ${t.cardBorder} shadow-2xl shadow-black/20 overflow-hidden transition-colors duration-300`}>
         {/* Question */}
@@ -223,7 +223,7 @@ function EndpointView({
       : 'bg-emerald-600 hover:bg-emerald-500 shadow-emerald-900/30';
 
   return (
-    <div className={`w-full max-w-2xl mx-auto transition-all duration-300 ${isTransitioning ? 'opacity-0 translate-y-2' : 'opacity-100 translate-y-0'}`}>
+    <div className={`w-full max-w-lg mx-auto transition-all duration-300 ${isTransitioning ? 'opacity-0 translate-y-2' : 'opacity-100 translate-y-0'}`}>
       {/* Result card */}
       <div className={`${t.cardBg} rounded-2xl border ${t.cardBorder} shadow-2xl shadow-black/20 overflow-hidden transition-colors duration-300`}>
         {/* Header */}
@@ -369,7 +369,7 @@ function WarningView({
   const { t } = useTheme();
 
   return (
-    <div className={`w-full max-w-2xl mx-auto transition-all duration-300 ${isTransitioning ? 'opacity-0 translate-y-2' : 'opacity-100 translate-y-0'}`}>
+    <div className={`w-full max-w-lg mx-auto transition-all duration-300 ${isTransitioning ? 'opacity-0 translate-y-2' : 'opacity-100 translate-y-0'}`}>
       <div className={`${t.cardBg} rounded-2xl border ${t.warningBorder} shadow-2xl shadow-black/20 overflow-hidden transition-colors duration-300`}>
         {/* Warning header */}
         <div className={`${t.warningHeaderBg} px-7 py-5 border-b ${t.warningBorder} flex items-center gap-3`}>
