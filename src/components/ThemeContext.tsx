@@ -2,7 +2,7 @@
 
 import { createContext, useContext, useState, ReactNode } from 'react';
 
-export type ThemeId = 'dark' | 'light';
+export type ThemeId = 'dark' | 'light' | 'nobel';
 
 type ThemeColors = {
   pageBg: string;
@@ -35,6 +35,7 @@ type ThemeColors = {
   backHoverText: string;
   warningHeaderBg: string;
   warningBorder: string;
+  partnerLogo?: string;
 };
 
 const themes: Record<ThemeId, ThemeColors> = {
@@ -102,6 +103,39 @@ const themes: Record<ThemeId, ThemeColors> = {
     warningHeaderBg: 'bg-amber-50',
     warningBorder: 'border-amber-200',
   },
+  nobel: {
+    pageBg: 'bg-slate-50',
+    pageGradientFrom: 'from-slate-50',
+    pageGradientVia: 'via-white',
+    pageGlow: 'bg-red-400/[0.04]',
+    text: 'text-slate-900',
+    textSecondary: 'text-slate-500',
+    textMuted: 'text-slate-400',
+    divider: 'bg-slate-200',
+    cardBg: 'bg-white',
+    cardBorder: 'border-slate-200',
+    optionBg: 'bg-slate-50',
+    optionBorder: 'border-slate-200',
+    optionHoverBg: 'hover:bg-red-50',
+    optionHoverBorder: 'hover:border-red-300',
+    optionText: 'text-slate-700',
+    optionLetterBg: 'bg-slate-100',
+    optionLetterHoverBg: 'group-hover/btn:bg-red-100',
+    optionLetterText: 'text-slate-400',
+    optionLetterHoverText: 'group-hover/btn:text-red-600',
+    optionArrow: 'text-slate-300',
+    optionArrowHover: 'group-hover/btn:text-red-500',
+    infoPanelBg: 'bg-red-50',
+    infoPanelBorder: 'border-red-100',
+    infoPanelText: 'text-slate-600',
+    footerText: 'text-slate-400',
+    footerBorder: 'border-slate-200',
+    backText: 'text-slate-400',
+    backHoverText: 'hover:text-slate-700',
+    warningHeaderBg: 'bg-amber-50',
+    warningBorder: 'border-amber-200',
+    partnerLogo: '/NobelBiocare logo_0_4.png',
+  },
 };
 
 type ThemeContextType = {
@@ -136,18 +170,27 @@ export function ThemeToggle() {
   const options: { id: ThemeId; label: string }[] = [
     { id: 'dark', label: 'Dark' },
     { id: 'light', label: 'Light' },
+    { id: 'nobel', label: 'Nobel Biocare' },
   ];
 
+  const isDark = themeId === 'dark';
+
   return (
-    <div className="flex items-center justify-center gap-1 p-1 rounded-lg bg-black/10 backdrop-blur-sm border border-white/10 w-fit mx-auto">
+    <div className={`flex items-center justify-center gap-1 p-1 rounded-lg backdrop-blur-sm w-fit mx-auto transition-colors duration-300 ${
+      isDark ? 'bg-white/10 border border-white/10' : 'bg-slate-200/80 border border-slate-300'
+    }`}>
       {options.map((opt) => (
         <button
           key={opt.id}
           onClick={() => setThemeId(opt.id)}
           className={`px-3.5 py-1.5 rounded-md text-xs font-medium transition-all duration-150 ${
             themeId === opt.id
-              ? 'bg-white/20 text-white shadow-sm'
-              : 'text-white/50 hover:text-white/80'
+              ? isDark
+                ? 'bg-white/20 text-white shadow-sm'
+                : 'bg-white text-slate-900 shadow-sm'
+              : isDark
+                ? 'text-white/50 hover:text-white/80'
+                : 'text-slate-500 hover:text-slate-700'
           }`}
         >
           {opt.label}

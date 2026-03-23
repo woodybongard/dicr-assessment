@@ -26,14 +26,35 @@ function HomeContent() {
         <header className="pt-6 pb-10 px-4">
           <div className="max-w-3xl mx-auto text-center">
             <div className="mb-6">
-              <Image
-                src="/dicr-logo-v5.png"
-                alt="DICR - Dental Implant Community Resource"
-                width={700}
-                height={250}
-                className="h-36 md:h-52 w-auto mx-auto"
-                priority
-              />
+              {t.partnerLogo ? (
+                <div className="flex items-center justify-center gap-6 md:gap-10 flex-wrap">
+                  <Image
+                    src="/dicr-logo-v5.png"
+                    alt="DICR - Dental Implant Community Resource"
+                    width={700}
+                    height={250}
+                    className="h-28 md:h-40 w-auto"
+                    priority
+                  />
+                  <div className={`w-px h-16 md:h-24 ${t.divider} hidden sm:block`} />
+                  <Image
+                    src={t.partnerLogo}
+                    alt="Partner"
+                    width={300}
+                    height={100}
+                    className="h-10 md:h-14 w-auto"
+                  />
+                </div>
+              ) : (
+                <Image
+                  src="/dicr-logo-v5.png"
+                  alt="DICR - Dental Implant Community Resource"
+                  width={700}
+                  height={250}
+                  className="h-36 md:h-52 w-auto mx-auto"
+                  priority
+                />
+              )}
             </div>
 
             <div className={`w-16 h-px ${t.divider} mx-auto mb-6`} />
