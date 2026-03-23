@@ -297,18 +297,18 @@ function EndpointView({
             <div className="mb-8">
               <p className={`text-xs ${t.textMuted} uppercase tracking-wider font-medium mb-4`}>Course Providers</p>
               <div className="grid grid-cols-2 gap-5 mx-auto mb-6">
-                <div className={`${t.optionBg} border ${t.optionBorder} rounded-xl p-6 flex items-center justify-center`}>
+                <a href="https://www.genesiseducation.ca" target="_blank" rel="noopener noreferrer" className={`${t.optionBg} border ${t.optionBorder} rounded-xl p-6 flex items-center justify-center hover:opacity-80 transition-opacity`}>
                   <Image src="/genesis-logo.png" alt="Genesis" width={400} height={200} className="w-full h-auto" />
-                </div>
-                <div className={`${t.optionBg} border ${t.optionBorder} rounded-xl p-6 flex items-center justify-center`}>
+                </a>
+                <a href="https://www.tideinc.ca/home" target="_blank" rel="noopener noreferrer" className={`${t.optionBg} border ${t.optionBorder} rounded-xl p-6 flex items-center justify-center hover:opacity-80 transition-opacity`}>
                   <Image src="/tide-logo.png" alt="TIDE" width={400} height={200} className="w-full h-auto" />
-                </div>
-                <div className={`${t.optionBg} border ${t.optionBorder} rounded-xl p-6 flex items-center justify-center`}>
+                </a>
+                <a href="https://www.gdmentors.com/" target="_blank" rel="noopener noreferrer" className={`${t.optionBg} border ${t.optionBorder} rounded-xl p-6 flex items-center justify-center hover:opacity-80 transition-opacity`}>
                   <Image src="/gdm-logo.png" alt="GDM" width={400} height={200} className="w-full h-auto" />
-                </div>
-                <div className={`${t.optionBg} border ${t.optionBorder} rounded-xl p-6 flex items-center justify-center`}>
+                </a>
+                <a href="https://ddidental.com/" target="_blank" rel="noopener noreferrer" className={`${t.optionBg} border ${t.optionBorder} rounded-xl p-6 flex items-center justify-center hover:opacity-80 transition-opacity`}>
                   <Image src="/ddi-logo.png" alt="DDI - Digital Dentistry Institute" width={400} height={200} className="w-full h-auto" />
-                </div>
+                </a>
               </div>
               <div className={`border-t ${t.cardBorder} pt-5`}>
                 <Image src="/NobelBiocare logo_0_4.png" alt="Nobel Biocare" width={300} height={80} className="w-48 h-auto mx-auto opacity-70" />
