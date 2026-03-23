@@ -297,21 +297,21 @@ function EndpointView({
             <div className="mb-8">
               <p className={`text-xs ${t.textMuted} uppercase tracking-wider font-medium mb-4`}>Course Providers</p>
               <div className="grid grid-cols-2 gap-5 mx-auto mb-6">
-                <div className={`${t.optionBg} border ${t.optionBorder} rounded-xl p-5 flex items-center justify-center h-44`}>
-                  <Image src="/genesis-logo.png" alt="Genesis" width={400} height={150} className="h-28 w-auto" />
+                <div className={`${t.optionBg} border ${t.optionBorder} rounded-xl p-6 flex items-center justify-center`}>
+                  <Image src="/genesis-logo.png" alt="Genesis" width={400} height={200} className="w-full h-auto" />
                 </div>
-                <div className={`${t.optionBg} border ${t.optionBorder} rounded-xl p-5 flex items-center justify-center h-44`}>
-                  <Image src="/tide-logo.png" alt="TIDE" width={400} height={150} className="h-32 w-auto" />
+                <div className={`${t.optionBg} border ${t.optionBorder} rounded-xl p-6 flex items-center justify-center`}>
+                  <Image src="/tide-logo.png" alt="TIDE" width={400} height={200} className="w-full h-auto" />
                 </div>
-                <div className={`${t.optionBg} border ${t.optionBorder} rounded-xl p-5 flex items-center justify-center h-44`}>
-                  <Image src="/gdm-logo.png" alt="GDM" width={400} height={150} className="h-28 w-auto" />
+                <div className={`${t.optionBg} border ${t.optionBorder} rounded-xl p-6 flex items-center justify-center`}>
+                  <Image src="/gdm-logo.png" alt="GDM" width={400} height={200} className="w-full h-auto" />
                 </div>
-                <div className={`${t.optionBg} border ${t.optionBorder} rounded-xl p-5 flex items-center justify-center h-44`}>
-                  <Image src="/ddi-logo.png" alt="DDI - Digital Dentistry Institute" width={400} height={150} className="h-28 w-auto" />
+                <div className={`${t.optionBg} border ${t.optionBorder} rounded-xl p-6 flex items-center justify-center`}>
+                  <Image src="/ddi-logo.png" alt="DDI - Digital Dentistry Institute" width={400} height={200} className="w-full h-auto" />
                 </div>
               </div>
               <div className={`border-t ${t.cardBorder} pt-5`}>
-                <Image src="/NobelBiocare logo_0_4.png" alt="Nobel Biocare" width={300} height={80} className="h-14 w-auto mx-auto opacity-70" />
+                <Image src="/NobelBiocare logo_0_4.png" alt="Nobel Biocare" width={300} height={80} className="w-48 h-auto mx-auto opacity-70" />
               </div>
             </div>
           )}
