@@ -296,22 +296,22 @@ function EndpointView({
           {isCoursesEndpoint && (
             <div className="mb-8">
               <p className={`text-xs ${t.textMuted} uppercase tracking-wider font-medium mb-4`}>Course Providers</p>
-              <div className="grid grid-cols-2 gap-4 max-w-sm mx-auto mb-6">
-                <div className={`${t.optionBg} border ${t.optionBorder} rounded-xl p-4 flex items-center justify-center h-20`}>
-                  <Image src="/genesis-logo.png" alt="Genesis" width={140} height={40} className="h-8 w-auto" />
+              <div className="grid grid-cols-2 gap-4 max-w-md mx-auto mb-6">
+                <div className={`${t.optionBg} border ${t.optionBorder} rounded-xl p-4 flex items-center justify-center h-28`}>
+                  <Image src="/genesis-logo.png" alt="Genesis" width={200} height={60} className="h-14 w-auto" />
                 </div>
-                <div className={`${t.optionBg} border ${t.optionBorder} rounded-xl p-4 flex items-center justify-center h-20`}>
-                  <Image src="/tide-logo.png" alt="TIDE" width={140} height={40} className="h-10 w-auto" />
+                <div className={`${t.optionBg} border ${t.optionBorder} rounded-xl p-4 flex items-center justify-center h-28`}>
+                  <Image src="/tide-logo.png" alt="TIDE" width={200} height={60} className="h-16 w-auto" />
                 </div>
-                <div className={`${t.optionBg} border ${t.optionBorder} rounded-xl p-4 flex items-center justify-center h-20`}>
-                  <Image src="/gdm-logo.png" alt="GDM" width={140} height={40} className="h-8 w-auto" />
+                <div className={`${t.optionBg} border ${t.optionBorder} rounded-xl p-4 flex items-center justify-center h-28`}>
+                  <Image src="/gdm-logo.png" alt="GDM" width={200} height={60} className="h-14 w-auto" />
                 </div>
-                <div className={`${t.optionBg} border ${t.optionBorder} rounded-xl p-4 flex items-center justify-center h-20`}>
-                  <Image src="/ddi-logo.png" alt="DDI - Digital Dentistry Institute" width={200} height={60} className="h-8 w-auto" />
+                <div className={`${t.optionBg} border ${t.optionBorder} rounded-xl p-4 flex items-center justify-center h-28`}>
+                  <Image src="/ddi-logo.png" alt="DDI - Digital Dentistry Institute" width={250} height={80} className="h-14 w-auto" />
                 </div>
               </div>
               <div className={`border-t ${t.cardBorder} pt-4`}>
-                <Image src="/NobelBiocare logo_0_4.png" alt="Nobel Biocare" width={160} height={50} className="h-6 w-auto mx-auto opacity-70" />
+                <Image src="/NobelBiocare logo_0_4.png" alt="Nobel Biocare" width={200} height={60} className="h-9 w-auto mx-auto opacity-70" />
               </div>
             </div>
           )}
