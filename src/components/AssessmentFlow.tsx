@@ -77,7 +77,7 @@ export default function AssessmentFlow() {
   }
 
   return (
-    <div className={`w-full max-w-xl mx-auto transition-all duration-300 ${isTransitioning ? 'opacity-0 translate-y-2' : 'opacity-100 translate-y-0'}`}>
+    <div className={`w-full max-w-2xl mx-auto transition-all duration-300 ${isTransitioning ? 'opacity-0 translate-y-2' : 'opacity-100 translate-y-0'}`}>
       {/* Card */}
       <div className={`${t.cardBg} rounded-2xl border ${t.cardBorder} shadow-2xl shadow-black/20 overflow-hidden transition-colors duration-300`}>
         {/* Question */}
@@ -223,7 +223,7 @@ function EndpointView({
       : 'bg-emerald-600 hover:bg-emerald-500 shadow-emerald-900/30';
 
   return (
-    <div className={`w-full max-w-xl mx-auto transition-all duration-300 ${isTransitioning ? 'opacity-0 translate-y-2' : 'opacity-100 translate-y-0'}`}>
+    <div className={`w-full max-w-2xl mx-auto transition-all duration-300 ${isTransitioning ? 'opacity-0 translate-y-2' : 'opacity-100 translate-y-0'}`}>
       {/* Result card */}
       <div className={`${t.cardBg} rounded-2xl border ${t.cardBorder} shadow-2xl shadow-black/20 overflow-hidden transition-colors duration-300`}>
         {/* Header */}
@@ -296,22 +296,22 @@ function EndpointView({
           {isCoursesEndpoint && (
             <div className="mb-8">
               <p className={`text-xs ${t.textMuted} uppercase tracking-wider font-medium mb-4`}>Course Providers</p>
-              <div className="grid grid-cols-2 gap-4 max-w-lg mx-auto mb-6">
-                <div className={`${t.optionBg} border ${t.optionBorder} rounded-xl p-6 flex items-center justify-center h-44`}>
-                  <Image src="/genesis-logo.svg" alt="Genesis" width={400} height={150} className="h-32 w-auto" />
+              <div className="grid grid-cols-2 gap-5 mx-auto mb-6">
+                <div className={`${t.optionBg} border ${t.optionBorder} rounded-xl px-6 py-8 flex items-center justify-center`}>
+                  <Image src="/genesis-logo.svg" alt="Genesis" width={500} height={200} className="w-full max-w-[220px]" />
                 </div>
-                <div className={`${t.optionBg} border ${t.optionBorder} rounded-xl p-6 flex items-center justify-center h-44`}>
-                  <Image src="/tide-logo.png" alt="TIDE" width={400} height={150} className="h-32 w-auto" />
+                <div className={`${t.optionBg} border ${t.optionBorder} rounded-xl px-6 py-8 flex items-center justify-center`}>
+                  <Image src="/tide-logo.png" alt="TIDE" width={500} height={200} className="w-full max-w-[220px]" />
                 </div>
-                <div className={`${t.optionBg} border ${t.optionBorder} rounded-xl p-6 flex items-center justify-center h-44`}>
-                  <Image src="/gdm-logo.avif" alt="GDM" width={400} height={150} className="h-32 w-auto" />
+                <div className={`${t.optionBg} border ${t.optionBorder} rounded-xl px-6 py-8 flex items-center justify-center`}>
+                  <Image src="/gdm-logo.avif" alt="GDM" width={500} height={200} className="w-full max-w-[220px]" />
                 </div>
-                <div className={`${t.optionBg} border ${t.optionBorder} rounded-xl p-6 flex items-center justify-center h-44`}>
-                  <Image src="/ddi-logo.png" alt="DDI - Digital Dentistry Institute" width={400} height={150} className="h-32 w-auto" />
+                <div className={`${t.optionBg} border ${t.optionBorder} rounded-xl px-6 py-8 flex items-center justify-center`}>
+                  <Image src="/ddi-logo.png" alt="DDI - Digital Dentistry Institute" width={500} height={200} className="w-full max-w-[220px]" />
                 </div>
               </div>
-              <div className={`border-t ${t.cardBorder} pt-6`}>
-                <Image src="/NobelBiocare logo_0_4.png" alt="Nobel Biocare" width={350} height={100} className="h-16 w-auto mx-auto opacity-70" />
+              <div className={`border-t ${t.cardBorder} py-6 flex items-center justify-center`}>
+                <Image src="/NobelBiocare logo_0_4.png" alt="Nobel Biocare" width={400} height={120} className="w-full max-w-[200px] opacity-70" />
               </div>
             </div>
           )}
@@ -369,7 +369,7 @@ function WarningView({
   const { t } = useTheme();
 
   return (
-    <div className={`w-full max-w-xl mx-auto transition-all duration-300 ${isTransitioning ? 'opacity-0 translate-y-2' : 'opacity-100 translate-y-0'}`}>
+    <div className={`w-full max-w-2xl mx-auto transition-all duration-300 ${isTransitioning ? 'opacity-0 translate-y-2' : 'opacity-100 translate-y-0'}`}>
       <div className={`${t.cardBg} rounded-2xl border ${t.warningBorder} shadow-2xl shadow-black/20 overflow-hidden transition-colors duration-300`}>
         {/* Warning header */}
         <div className={`${t.warningHeaderBg} px-7 py-5 border-b ${t.warningBorder} flex items-center gap-3`}>
