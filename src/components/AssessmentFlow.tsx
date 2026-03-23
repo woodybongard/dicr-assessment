@@ -1,7 +1,7 @@
 'use client';
 
 import { useState } from 'react';
-import { flowData, START_NODE_ID, FlowNode, EndpointNode } from '@/lib/questions';
+import { flowData, START_NODE_ID, FlowNode, EndpointNode, WarningNode } from '@/lib/questions';
 
 type HistoryEntry = {
   nodeId: string;
@@ -59,6 +59,18 @@ export default function AssessmentFlow() {
 
   if (currentNode.type === 'endpoint') {
     return <EndpointView node={currentNode} onRestart={handleRestart} responses={responses} isTransitioning={isTransitioning} />;
+  }
+
+  if (currentNode.type === 'warning') {
+    return (
+      <WarningView
+        node={currentNode}
+        onNext={() => handleOptionSelect('Acknowledged', currentNode.nextId)}
+        onBack={handleBack}
+        showBack={history.length > 1}
+        isTransitioning={isTransitioning}
+      />
+    );
   }
 
   return (
@@ -256,6 +268,76 @@ function EndpointView({
           Start over
         </button>
       </div>
+    </div>
+  );
+}
+
+function WarningView({
+  node,
+  onNext,
+  onBack,
+  showBack,
+  isTransitioning,
+}: {
+  node: WarningNode;
+  onNext: () => void;
+  onBack: () => void;
+  showBack: boolean;
+  isTransitioning: boolean;
+}) {
+  return (
+    <div className={`w-full max-w-xl mx-auto transition-all duration-300 ${isTransitioning ? 'opacity-0 translate-y-2' : 'opacity-100 translate-y-0'}`}>
+      <div className="bg-[#141E33] rounded-2xl border border-amber-600/30 shadow-2xl shadow-black/40 overflow-hidden">
+        {/* Warning header */}
+        <div className="bg-amber-500/10 px-7 py-5 border-b border-amber-600/20 flex items-center gap-3">
+          <svg className="w-6 h-6 text-amber-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4.5c-.77-.833-2.694-.833-3.464 0L3.34 16.5c-.77.833.192 2.5 1.732 2.5z" />
+          </svg>
+          <span className="text-amber-300 font-semibold text-sm uppercase tracking-wider">Please Note</span>
+        </div>
+
+        {/* Warning content */}
+        <div className="p-7 md:p-9">
+          <p className="text-slate-200 text-base md:text-lg leading-relaxed">
+            {node.text}
+          </p>
+        </div>
+
+        {/* Next button */}
+        <div className="px-7 pb-7">
+          <button
+            onClick={onNext}
+            className="w-full px-5 py-4 rounded-xl bg-slate-800/60 border border-slate-600/30
+                       hover:bg-blue-600/15 hover:border-blue-500/30
+                       active:scale-[0.995] transition-all duration-150 ease-out
+                       focus:outline-none focus:ring-2 focus:ring-blue-500/40
+                       group/btn"
+          >
+            <div className="flex items-center justify-center gap-2.5">
+              <span className="text-slate-200 group-hover/btn:text-white font-medium transition-colors">
+                Next
+              </span>
+              <svg className="w-4 h-4 text-slate-500 group-hover/btn:text-blue-400/70 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+              </svg>
+            </div>
+          </button>
+        </div>
+      </div>
+
+      {/* Back button */}
+      {showBack && (
+        <button
+          onClick={onBack}
+          className="mt-6 text-slate-500 hover:text-slate-200 text-sm flex items-center gap-1.5
+                     transition-colors duration-150 mx-auto"
+        >
+          <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+          </svg>
+          Back
+        </button>
+      )}
     </div>
   );
 }

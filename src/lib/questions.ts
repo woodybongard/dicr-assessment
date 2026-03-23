@@ -31,7 +31,14 @@ export type EndpointNode = {
   };
 };
 
-export type FlowNode = QuestionNode | EndpointNode;
+export type WarningNode = {
+  id: string;
+  type: 'warning';
+  text: string;
+  nextId: string;
+};
+
+export type FlowNode = QuestionNode | EndpointNode | WarningNode;
 
 export const flowData: Record<string, FlowNode> = {
   // ============================================
@@ -128,12 +135,32 @@ export const flowData: Record<string, FlowNode> = {
     options: [
       { label: 'Yes', nextId: 'placing-gd-training-documentation' },
       { label: 'No, I would like to gain further education/training', nextId: 'endpoint-courses' },
+      { label: 'I\'m not sure', nextId: 'placing-gd-proficiency-warning' },
     ],
     infoLink: {
       label: 'What is dentoalveolar surgical proficiency?',
       url: '#',
       description: 'A high level of dentoalveolar surgical proficiency is generally defined as the ability to independently and efficiently perform complex surgical procedures — including complicated dental extractions, pre-prosthetic surgery, and bone grafting — while managing complications and mitigating risks. This level of proficiency is marked by both technical skill and sound clinical judgment.',
     },
+  },
+
+  // Proficiency warning screen
+  'placing-gd-proficiency-warning': {
+    id: 'placing-gd-proficiency-warning',
+    type: 'warning',
+    text: 'In dentistry (especially in the context of guidelines, boards, or regulatory language), "high level of surgical proficiency" isn\'t just "you\'ve done a few cases." It means you can consistently plan, execute, and manage surgery independently — including complications.',
+    nextId: 'placing-gd-proficiency-confirm',
+  },
+
+  // Proficiency confirmation after warning
+  'placing-gd-proficiency-confirm': {
+    id: 'placing-gd-proficiency-confirm',
+    type: 'question',
+    text: 'With that in mind, would you consider yourself to have a high level of surgical proficiency?',
+    options: [
+      { label: 'Yes, and I can document my level of dentoalveolar surgical proficiency', nextId: 'placing-gd-training-documentation' },
+      { label: 'No', nextId: 'endpoint-courses' },
+    ],
   },
 
   'placing-gd-training-documentation': {
