@@ -197,24 +197,39 @@ function EndpointView({
   responses: Record<string, string>;
   isTransitioning: boolean;
 }) {
+  const isPeerReview = node.action.type === 'peer-review';
   const isCoursesEndpoint = node.action.type === 'ce-courses';
+
+  const headerGradient = isPeerReview
+    ? 'bg-gradient-to-b from-blue-500/10 to-transparent'
+    : isCoursesEndpoint
+      ? 'bg-gradient-to-b from-amber-500/10 to-transparent'
+      : 'bg-gradient-to-b from-emerald-500/10 to-transparent';
+
+  const iconClasses = isPeerReview
+    ? 'bg-blue-500/15 border border-blue-500/25'
+    : isCoursesEndpoint
+      ? 'bg-amber-500/15 border border-amber-500/25'
+      : 'bg-emerald-500/15 border border-emerald-500/25';
+
+  const buttonClasses = isPeerReview
+    ? 'bg-blue-600 hover:bg-blue-500 shadow-blue-900/30'
+    : isCoursesEndpoint
+      ? 'bg-amber-600 hover:bg-amber-500 shadow-amber-900/30'
+      : 'bg-emerald-600 hover:bg-emerald-500 shadow-emerald-900/30';
 
   return (
     <div className={`w-full max-w-xl mx-auto transition-all duration-300 ${isTransitioning ? 'opacity-0 translate-y-2' : 'opacity-100 translate-y-0'}`}>
       {/* Result card */}
       <div className="bg-[#141E33] rounded-2xl border border-slate-700/50 shadow-2xl shadow-black/40 overflow-hidden">
         {/* Header */}
-        <div className={`px-7 py-10 text-center ${
-          isCoursesEndpoint
-            ? 'bg-gradient-to-b from-amber-500/10 to-transparent'
-            : 'bg-gradient-to-b from-emerald-500/10 to-transparent'
-        }`}>
-          <div className={`w-16 h-16 rounded-xl mx-auto mb-5 flex items-center justify-center ${
-            isCoursesEndpoint
-              ? 'bg-amber-500/15 border border-amber-500/25'
-              : 'bg-emerald-500/15 border border-emerald-500/25'
-          }`}>
-            {isCoursesEndpoint ? (
+        <div className={`px-7 py-10 text-center ${headerGradient}`}>
+          <div className={`w-16 h-16 rounded-xl mx-auto mb-5 flex items-center justify-center ${iconClasses}`}>
+            {isPeerReview ? (
+              <svg className="w-8 h-8 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+              </svg>
+            ) : isCoursesEndpoint ? (
               <svg className="w-8 h-8 text-amber-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5}
                       d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
@@ -226,7 +241,9 @@ function EndpointView({
             )}
           </div>
 
-          <p className="text-xs text-slate-400 uppercase tracking-wider font-medium mb-2">Assessment Complete</p>
+          <p className="text-xs text-slate-400 uppercase tracking-wider font-medium mb-2">
+            {isPeerReview ? 'DICR Program' : 'Assessment Complete'}
+          </p>
           <h2 className="text-2xl md:text-3xl font-semibold text-white">
             {node.title}
           </h2>
@@ -241,11 +258,7 @@ function EndpointView({
           <a
             href={node.action.url}
             className={`inline-flex items-center gap-2.5 px-7 py-3.5 rounded-xl text-white font-medium
-                       transition-all duration-200 shadow-lg hover:shadow-xl hover:scale-[1.02] ${
-              isCoursesEndpoint
-                ? 'bg-amber-600 hover:bg-amber-500 shadow-amber-900/30'
-                : 'bg-emerald-600 hover:bg-emerald-500 shadow-emerald-900/30'
-            }`}
+                       transition-all duration-200 shadow-lg hover:shadow-xl hover:scale-[1.02] ${buttonClasses}`}
           >
             {node.action.label}
             <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">

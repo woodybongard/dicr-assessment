@@ -27,7 +27,7 @@ export type EndpointNode = {
   action: {
     label: string;
     url: string;
-    type: 'ce-courses' | 'open-account';
+    type: 'ce-courses' | 'open-account' | 'peer-review';
   };
 };
 
@@ -184,6 +184,7 @@ export const flowData: Record<string, FlowNode> = {
     text: 'Do you have training/experience in complex cases?',
     options: [
       { label: 'Yes, I have documentation to show that I have training and/or experience', nextId: 'endpoint-open-account' },
+      { label: 'Yes, I think I have the experience but not the documentation', nextId: 'endpoint-peer-review' },
       { label: 'No, I need training and/or mentorship', nextId: 'endpoint-courses' },
     ],
     infoLink: {
@@ -375,6 +376,7 @@ export const flowData: Record<string, FlowNode> = {
     text: 'Do you have training/experience in complex cases?',
     options: [
       { label: 'Yes, I have documentation to show that I have training and/or experience', nextId: 'endpoint-open-account' },
+      { label: 'Yes, I think I have the experience but not the documentation', nextId: 'endpoint-peer-review' },
       { label: 'No, I need training and/or mentorship', nextId: 'endpoint-courses' },
     ],
     infoLink: {
@@ -473,6 +475,18 @@ export const flowData: Record<string, FlowNode> = {
       label: 'Browse CE Courses',
       url: '#ce-courses',
       type: 'ce-courses',
+    },
+  },
+
+  'endpoint-peer-review': {
+    id: 'endpoint-peer-review',
+    type: 'endpoint',
+    title: 'Peer Reviewed to Validate Your Education and Experience',
+    description: 'Based on your responses, we recommend the DICR Peer Review program to help validate your education and experience.',
+    action: {
+      label: 'Learn About DICR Program',
+      url: '#peer-review',
+      type: 'peer-review',
     },
   },
 
