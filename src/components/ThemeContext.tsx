@@ -35,6 +35,7 @@ type ThemeColors = {
   backHoverText: string;
   warningHeaderBg: string;
   warningBorder: string;
+  logo: string;
   partnerLogo?: string;
 };
 
@@ -70,6 +71,7 @@ const themes: Record<ThemeId, ThemeColors> = {
     backHoverText: 'hover:text-slate-200',
     warningHeaderBg: 'bg-amber-500/10',
     warningBorder: 'border-amber-600/30',
+    logo: '/dicr-logo-v5.png',
   },
   light: {
     pageBg: 'bg-slate-50',
@@ -102,6 +104,7 @@ const themes: Record<ThemeId, ThemeColors> = {
     backHoverText: 'hover:text-slate-700',
     warningHeaderBg: 'bg-amber-50',
     warningBorder: 'border-amber-200',
+    logo: '/dicr-logo-light.png',
   },
   nobel: {
     pageBg: 'bg-slate-50',
@@ -134,6 +137,7 @@ const themes: Record<ThemeId, ThemeColors> = {
     backHoverText: 'hover:text-slate-700',
     warningHeaderBg: 'bg-amber-50',
     warningBorder: 'border-amber-200',
+    logo: '/dicr-logo-light.png',
     partnerLogo: '/NobelBiocare logo_0_4.png',
   },
 };

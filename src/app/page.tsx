@@ -29,7 +29,7 @@ function HomeContent() {
               {t.partnerLogo ? (
                 <div className="flex items-center justify-center gap-6 md:gap-10 flex-wrap">
                   <Image
-                    src="/dicr-logo-v5.png"
+                    src={t.logo}
                     alt="DICR - Dental Implant Community Resource"
                     width={700}
                     height={250}
@@ -47,7 +47,7 @@ function HomeContent() {
                 </div>
               ) : (
                 <Image
-                  src="/dicr-logo-v5.png"
+                  src={t.logo}
                   alt="DICR - Dental Implant Community Resource"
                   width={700}
                   height={250}
