@@ -259,6 +259,30 @@ function EndpointView({
             {node.description}
           </p>
 
+          {/* Peer review content */}
+          {isPeerReview && (
+            <div className="mb-8">
+              <div className="flex items-center justify-center gap-6 mb-6">
+                <div className="text-center">
+                  <div className="w-24 h-24 rounded-full overflow-hidden mx-auto mb-2 border-2 border-blue-500/30">
+                    <Image src="/john-zarb.jpg" alt="Dr. John Zarb" width={96} height={96} className="w-full h-full object-cover" />
+                  </div>
+                  <p className={`text-sm font-medium ${t.text}`}>Dr. John Zarb</p>
+                </div>
+                <div className="text-center">
+                  <div className="w-24 h-24 rounded-full overflow-hidden mx-auto mb-2 border-2 border-blue-500/30">
+                    <Image src="/brian-freund.jpg" alt="Dr. Brian Freund" width={96} height={96} className="w-full h-full object-cover" />
+                  </div>
+                  <p className={`text-sm font-medium ${t.text}`}>Dr. Brian Freund</p>
+                </div>
+              </div>
+              <div className="flex items-center justify-center gap-6">
+                <Image src="/genesis-logo.svg" alt="Genesis" width={120} height={35} className="h-7 w-auto" />
+                <Image src="/NobelBiocare logo_0_4.png" alt="Nobel Biocare" width={120} height={35} className="h-5 w-auto opacity-70" />
+              </div>
+            </div>
+          )}
+
           {/* Course provider logos — CE courses endpoint only */}
           {isCoursesEndpoint && (
             <div className="mb-8">
