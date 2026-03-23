@@ -277,8 +277,8 @@ function EndpointView({
                 </div>
               </div>
               <div className="flex items-center justify-center gap-6 mb-6">
-                <Image src="/genesis-logo.svg" alt="Genesis" width={180} height={50} className="h-12 w-auto" />
-                <Image src="/NobelBiocare logo_0_4.png" alt="Nobel Biocare" width={180} height={50} className="h-8 w-auto opacity-70" />
+                <Image src="/genesis-logo.svg" alt="Genesis" width={280} height={80} className="h-16 w-auto" />
+                <Image src="/NobelBiocare logo_0_4.png" alt="Nobel Biocare" width={280} height={80} className="h-12 w-auto opacity-70" />
               </div>
 
               {/* What is the program */}
@@ -297,21 +297,21 @@ function EndpointView({
             <div className="mb-8">
               <p className={`text-xs ${t.textMuted} uppercase tracking-wider font-medium mb-4`}>Course Providers</p>
               <div className="grid grid-cols-2 gap-4 max-w-sm mx-auto mb-6">
-                <div className={`${t.optionBg} border ${t.optionBorder} rounded-xl p-5 flex items-center justify-center h-24`}>
-                  <Image src="/genesis-logo.svg" alt="Genesis" width={200} height={60} className="h-12 w-auto" />
+                <div className={`${t.optionBg} border ${t.optionBorder} rounded-xl p-6 flex items-center justify-center h-32`}>
+                  <Image src="/genesis-logo.svg" alt="Genesis" width={300} height={100} className="h-20 w-auto" />
                 </div>
-                <div className={`${t.optionBg} border ${t.optionBorder} rounded-xl p-5 flex items-center justify-center h-24`}>
-                  <Image src="/tide-logo.png" alt="TIDE" width={200} height={60} className="h-14 w-auto" />
+                <div className={`${t.optionBg} border ${t.optionBorder} rounded-xl p-6 flex items-center justify-center h-32`}>
+                  <Image src="/tide-logo.png" alt="TIDE" width={300} height={100} className="h-22 w-auto" />
                 </div>
-                <div className={`${t.optionBg} border ${t.optionBorder} rounded-xl p-5 flex items-center justify-center h-24`}>
-                  <Image src="/gdm-logo.avif" alt="GDM" width={200} height={60} className="h-12 w-auto" />
+                <div className={`${t.optionBg} border ${t.optionBorder} rounded-xl p-6 flex items-center justify-center h-32`}>
+                  <Image src="/gdm-logo.avif" alt="GDM" width={300} height={100} className="h-20 w-auto" />
                 </div>
-                <div className={`${t.optionBg} border ${t.optionBorder} rounded-xl p-5 flex items-center justify-center h-24`}>
-                  <Image src="/ddi-logo.png" alt="DDI - Digital Dentistry Institute" width={250} height={80} className="h-12 w-auto" />
+                <div className={`${t.optionBg} border ${t.optionBorder} rounded-xl p-6 flex items-center justify-center h-32`}>
+                  <Image src="/ddi-logo.png" alt="DDI - Digital Dentistry Institute" width={350} height={120} className="h-20 w-auto" />
                 </div>
               </div>
-              <div className={`border-t ${t.cardBorder} pt-4`}>
-                <Image src="/NobelBiocare logo_0_4.png" alt="Nobel Biocare" width={200} height={60} className="h-8 w-auto mx-auto opacity-70" />
+              <div className={`border-t ${t.cardBorder} pt-5`}>
+                <Image src="/NobelBiocare logo_0_4.png" alt="Nobel Biocare" width={280} height={80} className="h-12 w-auto mx-auto opacity-70" />
               </div>
             </div>
           )}
