@@ -55,6 +55,9 @@ function HomeContent() {
                   priority
                 />
               )}
+              <p className={`mt-2 text-sm md:text-base tracking-[0.2em] uppercase ${t.textSecondary} font-light`}>
+                Dental Implant Community Resource
+              </p>
             </div>
 
             <div className={`w-16 h-px ${t.divider} mx-auto mb-6`} />
